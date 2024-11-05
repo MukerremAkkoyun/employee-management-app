@@ -1,0 +1,19 @@
+image: node:18
+
+pages:
+  script:
+    - npm install
+    - npm run gitlab:gen
+    - npm run gitlab:build
+    # - mkdir public
+    # - >
+    #   if ls dev/*.html 1> /dev/null 2>&1; then
+    #     cp dev/*.html public/
+    #   else
+    #     cp -r dev/* public/
+    #   fi
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
