@@ -1,0 +1,5 @@
+/node_modules/
+# only generated for size check
+docs/
+public/
+.vscode
